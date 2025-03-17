@@ -326,7 +326,25 @@ form input {
     color: var(--acento);
     text-shadow: 1px 1px 0px #000;
 }
-
+section#nosotros article {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+section#nosotros article img {
+    width: 50%;
+}
+section#nosotros article nosotrosinfo {
+    background: var(--bgopacidad);
+    color: var(--claro);
+    text-align: justify;
+    padding: 10px;
+    width: 50%;
+    font-family: var(--ffont);
+    font-size: 1rem;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+}
 @media (max-width: 320px) {
     header {max-width: 320px;}
 }
