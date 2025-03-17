@@ -15,6 +15,12 @@ body#pindex {
     background-size: cover;
     background-attachment: fixed;
 }
+body#backpags {
+    background-image: url(../assets/playabckpages.jpg), linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .3));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 img, svg { height: auto; max-width: 100%; }
 
@@ -38,6 +44,7 @@ header {
     background-color: var(--bgopacidad);
     padding: 0px 20px;
     position: fixed;
+    top: 0;
     width: 100%;
     -webkit-backdrop-filter: blur(1px);   
     backdrop-filter: blur(1px);
@@ -93,10 +100,14 @@ header nav {
     transform-origin: bottom left;
 }
 /* CUERPO */
-.fullwdw {
-    height: 90vh;
-    padding-top: 200px;
-    box-sizing: border-box;
+section.fullwdw {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 300px;
 }
 .fullwdw:nth-child(2) {
     display: flex;
@@ -106,13 +117,33 @@ header nav {
 .fullwdw:nth-child(3) {
     padding-top: 0px;
 }
+section#contacto {
+    flex-direction: row;
+}
+section#contacto article {
+    width: 80%;
+}
+section#contacto article div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+section#contacto img {
+    width: 40%;
+}
+contactinfo {
+    text-transform: initial;
+    font-size: 14px;
+    text-align: justify;
+    color: var(--claro);
+    padding-right: 15px;
+}
 main h1 {
     font-family: var(--ftitle);
     color: var(--claro);
     text-shadow: -1px -1px 0 var(--oscuro), 1px -1px 0 var(--oscuro), -1px 1px 0 var(--oscuro), 1px 1px 0 var(--oscuro);
     text-align: justify;
     font-size: 3.125rem;
-    width: 40%;
     font-weight: 400;
 }
 .moreinfo {
@@ -133,11 +164,13 @@ button:hover {
     grid-template-columns: 30% 70%;
     align-items: center;
     justify-items: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 #sliders article:first-child {
-    font-family: var(--ftitle);
-    font-weight: 500;
-    width: 70%;
+    font-family: var(--ffont);
+    width: 80%;
     text-align: justify;
     background: var(--bgopacidad);
     color: var(--claro);
@@ -151,9 +184,9 @@ button:hover {
     justify-items: center;
 }
 #sliders img {
-    width: 80%;
+    width: 100%;
     border: 2px solid var(--acento);
-    height: 60%;
+    height: 100%;
 }
 footer {
     display: grid;
@@ -166,6 +199,8 @@ footer {
     backdrop-filter: blur(1px);
     border-top: 1px solid var(--oscuro);
     color: var(--claro);
+    position: fixed;
+    bottom: 0;
 }
 footer section {
     display: flex;
@@ -180,6 +215,9 @@ footer article {
 }
 footer li {
     display: block;
+    font-family: var(--ffont);
+    font-size: .875rem;
+    color: var(--claro);
 }
 footer ul {
     padding: 0px;
@@ -191,20 +229,20 @@ section i {
     vertical-align: super;
 }
 article.malibu {
-    width: 300px;
+    width: 350px;
     display: inline-block;
     border: 1px solid var(--oscuro);
     margin: 0px 30px;
-    height: 400px;
+    height: 500px;
     background-image: url('../assets/malibu.jpg');
     background-size: cover;
 }
 article.hawaii {
-    width: 300px;
+    width: 350px;
     display: inline-block;
     border: 1px solid var(--oscuro);
     margin: 0px 30px;
-    height: 400px;
+    height: 500px;
     background-image: url('../assets/hawaii.jpg');
     background-size: cover;
 }
@@ -219,14 +257,52 @@ article div {
     font-family: var(--fmono);
     text-transform: uppercase;
     color: var(--claro);
+    padding: 5px;
+    width: fit-content;
+    font-size: 0.75rem;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+}
+#backpags section.fullwdw {
+    margin-top: 200px;
+    padding-bottom: 200px;
+}
+#backpags section.fullwdw section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px 10px;
 }
 .contactinfo {
-    color: var(--oscuro);
-    font-family: var(--ftitle);
+    color: var(--claro);
+    font-family: var(--ffont);
     text-transform: inherit;
-    width: 500px;
+    width: 50%;
     text-align: justify;
-    padding: 30px;
+    padding: 1.875rem;
+    margin: auto;
+    font-size: .875rem;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 10px;
+}
+form label {
+    text-transform: uppercase;
+    font-family: var(--fmono);
+    color: var(--acento);
+    text-shadow: 1px 1px 0px #000;
+}
+form input {
+    font-family: var(--ffont);
+    background: var(--acento);
+    border: 1px solid var(--oscuro);
 }
 .paquete {
     width: 300px;
