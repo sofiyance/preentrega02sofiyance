@@ -10,83 +10,80 @@ input, button, textarea, select {
   font: inherit; }
 
 body {
-  background-color: #d8d5d0;
+  background-color: #eee;
   min-height: 100dvh; }
-  body#pindex {
-    background-image: url(../assets/playabackgr.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-attachment: fixed; }
-  body#backpags {
-    background-image: url(../assets/playabckpages.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-attachment: fixed; }
-  body a {
-    text-decoration: none;
-    cursor: crosshair; }
+
+body#pindex {
+  background-image: url(../assets/playabackgr.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed; }
+
+body#backpags {
+  background-image: url(../assets/playabckpages.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed; }
 
 img, svg {
   height: auto;
   max-width: 100%; }
 
-:root {
-  --claro: #eee;
-  --oscuro: #1d1d1d;
-  --bgopacidad: rgba(11,11,11,.3);
-  --acento: rgba(172, 161, 139, 0.75);
-  --ftitle: Abril Fatface;
-  --ffont: Noto Sans;
-  --fmono: Noto sans Mono; }
+body a {
+  text-decoration: none;
+  cursor: crosshair; }
 
 /* HEADER */
 header {
-  background-color: var(--bgopacidad);
+  background-color: rgba(11, 11, 11, 0.3);
   padding: 0px 20px;
   position: fixed;
   top: 0;
   width: 100%;
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
-  border-bottom: 1px solid var(--oscuro); }
-  header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; }
+  border-bottom: 1px solid #1d1d1d; }
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; }
 
 .title {
-  font-family: var(--ftitle);
+  font-family: "Abril Fatface";
   font-weight: 900;
   text-transform: uppercase;
   font-size: 3.75rem;
-  color: var(--oscuro);
+  color: #1d1d1d;
   white-space: nowrap; }
 
 .links li {
   display: inline;
   text-transform: uppercase;
-  font-family: var(--fmono); }
+  font-family: "Noto Sans Mono"; }
 
 .links a {
-  color: var(--claro);
+  color: #eee;
   font-size: .875rem;
   margin: 0px 10px;
   position: relative;
   padding: 5px; }
-  .links a::before {
-    content: "";
-    display: block;
-    position: absolute;
-    inset: 0;
-    background: var(--acento);
-    mix-blend-mode: hue;
-    transition: transform .3s ease;
-    transform: scaleX(0);
-    transform-origin: bottom right; }
-  .links a:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left; }
+
+.links a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: rgba(172, 161, 139, 0.75);
+  mix-blend-mode: hue;
+  transition: transform .3s ease;
+  transform: scaleX(0);
+  transform-origin: bottom right; }
+
+.links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left; }
 
 /* CUERPO */
 section.fullwdw {
@@ -97,55 +94,56 @@ section.fullwdw {
   width: 70%;
   margin: 0 auto;
   margin-top: 300px; }
-  section.fullwdw:nth-child(2) {
-    padding: 200px; }
-  section.fullwdw:nth-child(3) {
-    padding-top: 0px; }
+
+.fullwdw:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  padding: 200px; }
+
+.fullwdw:nth-child(3) {
+  padding-top: 0px; }
 
 section#contacto {
   flex-direction: row; }
-  section#contacto article {
-    width: 80%; }
-    section#contacto article div {
-      display: flex;
-      flex-direction: row;
-      gap: 20px; }
-  section#contacto img {
-    width: 40%; }
+
+section#contacto article {
+  width: 80%; }
+
+section#contacto article div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; }
+
+section#contacto img {
+  width: 40%; }
 
 contactinfo {
   text-transform: initial;
   font-size: .875rem;
   text-align: justify;
-  color: var(--claro);
+  color: #eee;
   padding-right: .9375rem;
-  font-family: var(--ffont); }
+  font-family: "Noto Sans"; }
 
 main h1 {
-  font-family: var(--ftitle);
-  color: var(--claro);
-  text-shadow: -1px -1px 0 var(--oscuro), 1px -1px 0 var(--oscuro), -1px 1px 0 var(--oscuro), 1px 1px 0 var(--oscuro);
+  font-family: "Abril Fatface";
+  color: #eee;
+  text-shadow: -1px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, -1px 1px 0 #1d1d1d, 1px 1px 0 #1d1d1d;
   text-align: justify;
   font-size: 3.125rem;
   font-weight: 400; }
 
-main h2 {
-  font-family: var(--ftitle);
-  font-size: 40px;
-  margin: 0px 40px 20px 40px;
-  color: var(--oscuro); }
-
 .moreinfo {
-  background-color: var(--claro);
-  border: 2px solid var(--acento);
-  font-family: var(--fmono);
+  background-color: #eee;
+  border: 2px solid rgba(172, 161, 139, 0.75);
+  font-family: "Noto Sans Mono";
   text-transform: uppercase;
   font-size: .75rem;
   padding: 5px 10px;
   width: 200px; }
 
 button:hover {
-  background-color: var(--acento);
+  background-color: rgba(172, 161, 139, 0.75);
   cursor: pointer; }
 
 #sliders {
@@ -155,66 +153,73 @@ button:hover {
   justify-items: center;
   width: 100%;
   margin: 100px 0; }
-  #sliders article:first-child {
-    font-family: var(--ffont);
-    width: 80%;
-    text-align: justify;
-    background: var(--bgopacidad);
-    color: var(--claro);
-    padding: 30px; }
-  #sliders img {
-    width: 100%;
-    border: 2px solid var(--acento);
-    height: 100%; }
+
+#sliders article:first-child {
+  font-family: "Noto Sans";
+  width: 80%;
+  text-align: justify;
+  background: rgba(11, 11, 11, 0.3);
+  color: #eee;
+  padding: 30px; }
 
 .gridcontainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: .9375rem;
   align-items: center;
   justify-items: center; }
+
+#sliders img {
+  width: 100%;
+  border: 2px solid rgba(172, 161, 139, 0.75);
+  height: 100%; }
 
 footer {
   display: grid;
   grid-template-columns: 80% 20%;
   align-items: center;
-  background-color: var(--bgopacidad);
+  background-color: rgba(11, 11, 11, 0.3);
   padding: 0px 20px;
   width: 100%;
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
-  border-top: 1px solid var(--oscuro);
-  color: var(--claro);
+  border-top: 1px solid #1d1d1d;
+  color: #eee;
   position: fixed;
   bottom: 0; }
-  footer section {
-    display: flex; }
-  footer article {
-    display: inline-block;
-    font-family: var(--ftitle);
-    font-weight: 600;
-    text-align: justify;
-    width: 33%;
-    margin: 20px 50px; }
-  footer li {
-    display: block;
-    font-family: var(--ffont);
-    font-size: .875rem;
-    color: var(--claro); }
-  footer ul {
-    padding: 0; }
+
+footer section {
+  display: flex; }
+
+footer article {
+  display: inline-block;
+  font-family: "Abril Fatface";
+  font-weight: 600;
+  text-align: justify;
+  width: 33%;
+  margin: 20px 50px; }
+
+footer li {
+  display: block;
+  font-family: "Noto Sans";
+  font-size: .875rem;
+  color: #eee; }
+
+footer ul {
+  padding: 0px; }
 
 section i {
   font-size: 30px;
-  margin: 0 20px;
-  color: var(--claro);
+  margin: 0px 20px;
+  color: #eee;
   vertical-align: super; }
 
-article.malibu, article.hawaii {
+article.malibu,
+article.hawaii {
   width: 350px;
   display: inline-block;
-  border: 1px solid var(--oscuro);
-  margin: 0 30px;
+  border: 1px solid #1d1d1d;
+  margin: 0px 30px;
   height: 500px;
   background-size: cover; }
 
@@ -224,11 +229,17 @@ article.malibu {
 article.hawaii {
   background-image: url("../assets/hawaii.jpg"); }
 
+main h2 {
+  font-family: "Abril Fatface";
+  font-size: 40px;
+  margin: 0px 40px 20px 40px;
+  color: #1d1d1d; }
+
 article div {
   background: rgba(0, 0, 0, 0.2);
-  font-family: var(--fmono);
+  font-family: "Noto Sans Mono";
   text-transform: uppercase;
-  color: var(--claro);
+  color: #eee;
   padding: 5px;
   width: fit-content;
   font-size: 0.75rem;
@@ -238,17 +249,18 @@ article div {
 #backpags section.fullwdw {
   margin-top: 200px;
   padding-bottom: 200px; }
-  #backpags section.fullwdw section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 30px 10px; }
+
+#backpags section.fullwdw section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px 10px; }
 
 .contactinfo {
-  color: var(--claro);
-  font-family: var(--ffont);
+  color: #eee;
+  font-family: "Noto Sans";
   text-transform: inherit;
   width: 50%;
   text-align: justify;
@@ -263,68 +275,91 @@ form {
   flex-direction: column;
   width: 20%;
   gap: 10px; }
-  form label {
-    text-transform: uppercase;
-    font-family: var(--fmono);
-    color: var(--acento);
-    text-shadow: 1px 1px 0px #000; }
-  form input {
-    font-family: var(--ffont);
-    background: var(--acento);
-    border: 1px solid var(--oscuro); }
+
+form label {
+  text-transform: uppercase;
+  font-family: "Noto Sans Mono";
+  color: rgba(172, 161, 139, 0.75);
+  text-shadow: 1px 1px 0px #000; }
+
+form input {
+  font-family: "Noto Sans";
+  background: rgba(172, 161, 139, 0.75);
+  border: 1px solid #1d1d1d; }
 
 .paquete {
   width: 50%;
   padding: 30px;
-  color: var(--claro);
+  color: #eee;
   text-align: justify;
-  font-family: var(--ffont);
+  font-family: "Noto Sans";
   text-transform: inherit;
   margin: 0 auto;
-  border: 1px solid var(--oscuro);
+  border: 1px solid #1d1d1d;
   font-size: 1rem; }
-  .paquete > titulo {
-    text-align: center;
-    display: block;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-family: var(--ftitle);
-    letter-spacing: 1px;
-    color: var(--acento);
-    text-shadow: 1px 1px 0px #000; }
+
+.paquete > titulo {
+  text-align: center;
+  display: block;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "Abril Fatface";
+  letter-spacing: 1px;
+  color: rgba(172, 161, 139, 0.75);
+  text-shadow: 1px 1px 0px #000; }
 
 section#nosotros article {
   display: flex;
   flex-direction: row;
   gap: 20px; }
-  section#nosotros article img {
-    width: 50%; }
-  section#nosotros article nosotrosinfo {
-    background: var(--bgopacidad);
-    color: var(--claro);
-    text-align: justify;
-    padding: 10px;
-    width: 50%;
-    font-family: var(--ffont);
-    font-size: 1rem;
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px); }
 
-/* MEDIA QUERIES */
+section#nosotros article img {
+  width: 50%; }
+
+section#nosotros article nosotrosinfo {
+  background: rgba(11, 11, 11, 0.3);
+  color: #eee;
+  text-align: justify;
+  padding: 10px;
+  width: 50%;
+  font-family: "Noto Sans";
+  font-size: 1rem;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px); }
+
+@media (max-width: 320px) {
+  header {
+    max-width: 320px; } }
+
+@media (max-width: 375px) {
+  header {
+    max-width: 375px; } }
+
+@media (max-width: 425px) {
+  header {
+    max-width: 425px; } }
+
+@media (max-width: 768px) {
+  header {
+    max-width: 768px; } }
+
+@media (max-width: 1024px) {
+  header {
+    max-width: 1024px; } }
+
 @media (max-width: 1440px) {
   header {
     max-width: 1440px; } }
 
 @media (max-width: 1024px) {
   header {
-    max-width: 1024px;
     flex-direction: column !important; }
   .title {
     font-size: 1.75rem !important;
-    -webkit-text-stroke: 1px var(--claro) !important; }
+    -webkit-text-stroke: 1px #eee !important; }
   .links a {
     font-size: .75rem !important;
-    margin: 0 !important; }
+    margin: 0px !important; }
   .fullwdw:nth-child(2) {
     padding: 70px 10px 10px 10px !important;
     align-items: center !important;
@@ -342,19 +377,3 @@ section#nosotros article {
     padding: 15px !important; }
   .gridcontainer {
     display: none !important; } }
-
-@media (max-width: 768px) {
-  header {
-    max-width: 768px; } }
-
-@media (max-width: 425px) {
-  header {
-    max-width: 425px; } }
-
-@media (max-width: 375px) {
-  header {
-    max-width: 375px; } }
-
-@media (max-width: 320px) {
-  header {
-    max-width: 320px; } }
