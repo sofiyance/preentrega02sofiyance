@@ -1,0 +1,379 @@
+/* VARIABLES */
+:root {
+  --claro: #eee;
+  --oscuro: #1d1d1d;
+  --bgopacidad: rgba(11, 11, 11, 0.3);
+  --acento: rgba(172, 161, 139, 0.75);
+  --ftitle: 'Abril Fatface';
+  --ffont: 'Noto Sans';
+  --fmono: 'Noto sans Mono';
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  background-color: #d8d5d0;
+  min-height: 100dvh;
+
+  &#pindex {
+    background-image: url(../assets/playabackgr.jpg),
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  &#backpags {
+    background-image: url(../assets/playabckpages.jpg),
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: crosshair;
+  }
+}
+
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+/* HEADER */
+header {
+  background-color: var(--bgopacidad);
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border-bottom: 1px solid var(--oscuro);
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .title {
+    font-family: var(--ftitle);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 3.75rem;
+    color: var(--oscuro);
+    white-space: nowrap;
+  }
+
+  .links {
+    li {
+      display: inline;
+      text-transform: uppercase;
+      font-family: var(--fmono);
+    }
+
+    a {
+      color: var(--claro);
+      font-size: 0.875rem;
+      margin: 0 10px;
+      position: relative;
+      padding: 5px;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        inset: 0;
+        background: var(--acento);
+        mix-blend-mode: hue;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
+/* CUERPO */
+section.fullwdw {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 300px;
+
+  &:nth-child(2) {
+    padding: 200px;
+  }
+
+  &:nth-child(3) {
+    padding-top: 0;
+  }
+
+  #backpags & {
+    margin-top: 200px;
+    padding-bottom: 200px;
+
+    section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px 10px;
+    }
+  }
+}
+
+section#contacto {
+  flex-direction: row;
+
+  article {
+    width: 80%;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  img {
+    width: 40%;
+  }
+}
+
+.contactinfo {
+  text-transform: initial;
+  font-size: 0.875rem;
+  text-align: justify;
+  color: var(--claro);
+  padding-right: 0.9375rem;
+  font-family: var(--ffont);
+
+  #backpags & {
+    width: 50%;
+    padding: 1.875rem;
+    margin: auto;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }
+}
+
+main {
+  h1 {
+    font-family: var(--ftitle);
+    color: var(--claro);
+    text-shadow: -1px -1px 0 var(--oscuro), 1px -1px 0 var(--oscuro),
+      -1px 1px 0 var(--oscuro), 1px 1px 0 var(--oscuro);
+    text-align: justify;
+    font-size: 3.125rem;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-family: var(--ftitle);
+    font-size: 40px;
+    margin: 0 40px 20px;
+    color: var(--oscuro);
+  }
+}
+
+.moreinfo {
+  background-color: var(--claro);
+  border: 2px solid var(--acento);
+  font-family: var(--fmono);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  width: 200px;
+}
+
+button:hover {
+  background-color: var(--acento);
+  cursor: pointer;
+}
+
+#sliders {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  margin: 100px 0;
+
+  article:first-child {
+    font-family: var(--ffont);
+    width: 80%;
+    text-align: justify;
+    background: var(--bgopacidad);
+    color: var(--claro);
+    padding: 30px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--acento);
+  }
+}
+
+.gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9375rem;
+  align-items: center;
+  justify-items: center;
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  background-color: var(--bgopacidad);
+  padding: 0 20px;
+  width: 100%;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border-top: 1px solid var(--oscuro);
+  color: var(--claro);
+  position: fixed;
+  bottom: 0;
+
+  section {
+    display: flex;
+  }
+
+  article {
+    display: inline-block;
+    font-family: var(--ftitle);
+    font-weight: 600;
+    text-align: justify;
+    width: 33%;
+    margin: 20px 50px;
+  }
+
+  li {
+      display: block;
+    font-family: var(--ffont);
+    font-size: 0.875rem;
+    color: var(--claro);
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+
+section i {
+  font-size: 30px;
+  margin: 0 20px;
+  color: var(--claro);
+  vertical-align: super;
+}
+
+/* ARTÍCULOS DE FONDO */
+article {
+  &.malibu,
+  &.hawaii {
+    width: 350px;
+    display: inline-block;
+    border: 1px solid var(--oscuro);
+    margin: 0 30px;
+    height: 500px;
+    background-size: cover;
+  }
+
+  &.malibu {
+    background-image: url('../assets/malibu.jpg');
+  }
+
+  &.hawaii {
+    background-image: url('../assets/hawaii.jpg');
+  }
+
+  div {
+    background: rgba(0, 0, 0, 0.2);
+    font-family: var(--fmono);
+    text-transform: uppercase;
+    color: var(--claro);
+    padding: 5px;
+    width: fit-content;
+    font-size: 0.75rem;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }
+}
+
+/* FORMULARIO */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 10px;
+
+  input,
+  textarea {
+    background-color: var(--claro);
+    border: 1px solid var(--oscuro);
+    font-family: var(--fmono);
+    font-size: 0.875rem;
+    padding: 10px;
+    color: var(--oscuro);
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  button {
+    background-color: var(--oscuro);
+    color: var(--claro);
+    border: none;
+    font-family: var(--fmono);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--acento);
+    }
+  }
+}
