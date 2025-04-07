@@ -1,0 +1,232 @@
+body#pindex {
+    background-image: url(../assets/playabackgr.jpg), linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .3));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  body#backpags {
+    background-image: url(../assets/playabckpages.jpg), linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .3));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  section#contacto {
+    flex-direction: row;
+  }
+  
+  section#contacto article {
+    width: 80%;
+  }
+  
+  section#contacto article div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  section#contacto img {
+    width: 40%;
+  }
+  
+  contactinfo {
+    text-transform: initial;
+    font-size: .875rem;
+    text-align: justify;
+    color: $claro;
+    padding-right: .9375rem;
+    font-family: $ffont;
+  }
+  
+  main h1 {
+    font-family: $ftitle;
+    color: $claro;
+    text-shadow: -1px -1px 0 $oscuro, 1px -1px 0 $oscuro, -1px 1px 0 $oscuro, 1px 1px 0 $oscuro;
+    text-align: justify;
+    font-size: 3.125rem;
+    font-weight: 400;
+  }
+  
+  .moreinfo {
+    background-color: $claro;
+    border: 2px solid $acento;
+    font-family: $fmono;
+    text-transform: uppercase;
+    font-size: .75rem;
+    padding: 5px 10px;
+    width: 200px;
+  }
+  
+  button:hover {
+    background-color: $acento;
+    cursor: pointer;
+  }
+  
+  #sliders {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    margin: 100px 0;
+  }
+  
+  #sliders article:first-child {
+    font-family: $ffont;
+    width: 80%;
+    text-align: justify;
+    background: $bgopacidad;
+    color: $claro;
+    padding: 30px;
+  }
+  
+  .gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .9375rem;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  #sliders img {
+    width: 100%;
+    border: 2px solid $acento;
+    height: 100%;
+  }
+  
+  section i {
+    font-size: 30px;
+    margin: 0px 20px;
+    color: $claro;
+    vertical-align: super;
+  }
+  
+  article.malibu,
+  article.hawaii {
+    width: 350px;
+    display: inline-block;
+    border: 1px solid $oscuro;
+    margin: 0px 30px;
+    height: 500px;
+    background-size: cover;
+  }
+  
+  article.malibu {
+    background-image: url('../assets/malibu.jpg');
+  }
+  
+  article.hawaii {
+    background-image: url('../assets/hawaii.jpg');
+  }
+  
+  main h2 {
+    font-family: $ftitle;
+    font-size: 40px;
+    margin: 0px 40px 20px 40px;
+    color: $oscuro;
+  }
+  
+  article div {
+    background: rgba(0, 0, 0, 0.2);
+    font-family: $fmono;
+    text-transform: uppercase;
+    color: $claro;
+    padding: 5px;
+    width: fit-content;
+    font-size: 0.75rem;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }
+  
+  #backpags section.fullwdw {
+    margin-top: 200px;
+    padding-bottom: 200px;
+  }
+  
+  #backpags section.fullwdw section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px 10px;
+  }
+  
+  .contactinfo {
+    color: $claro;
+    font-family: $ffont;
+    text-transform: inherit;
+    width: 50%;
+    text-align: justify;
+    padding: 1.875rem;
+    margin: auto;
+    font-size: .875rem;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 10px;
+  }
+  
+  form label {
+    text-transform: uppercase;
+    font-family: $fmono;
+    color: $acento;
+    text-shadow: 1px 1px 0px #000;
+  }
+  
+  form input {
+    font-family: $ffont;
+    background: $acento;
+    border: 1px solid $oscuro;
+  }
+  
+  .paquete {
+    width: 50%;
+    padding: 30px;
+    color: $claro;
+    text-align: justify;
+    font-family: $ffont;
+    text-transform: inherit;
+    margin: 0 auto;
+    border: 1px solid $oscuro;
+    font-size: 1rem;
+  }
+  
+  .paquete>titulo {
+    text-align: center;
+    display: block;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: $ftitle;
+    letter-spacing: 1px;
+    color: $acento;
+    text-shadow: 1px 1px 0px #000;
+  }
+  
+  section#nosotros article {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  section#nosotros article img {
+    width: 50%;
+  }
+  
+  section#nosotros article nosotrosinfo {
+    background: $bgopacidad;
+    color: $claro;
+    text-align: justify;
+    padding: 10px;
+    width: 50%;
+    font-family: $ffont;
+    font-size: 1rem;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }

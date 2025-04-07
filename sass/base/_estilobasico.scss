@@ -1,0 +1,63 @@
+body {
+    background-color: $claro;
+    min-height: 100dvh;
+  }
+  img, svg {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  body a {
+    text-decoration: none;
+    cursor: crosshair;
+  }
+  .links li {
+    display: inline;
+    text-transform: uppercase;
+    font-family: $fmono;
+  }
+  
+  .links a {
+    color: $claro;
+    font-size: .875rem;
+    margin: 0px 10px;
+    position: relative;
+    padding: 5px;
+  }
+  
+  .links a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: $acento;
+    mix-blend-mode: hue;
+    transition: transform .3s ease;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .links a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  /* CUERPO */
+section.fullwdw {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 300px;
+  }
+  
+  .fullwdw:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    padding: 200px;
+  }
+  
+  .fullwdw:nth-child(3) {
+    padding-top: 0px;
+  }

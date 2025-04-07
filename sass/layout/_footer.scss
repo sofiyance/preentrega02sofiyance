@@ -1,0 +1,38 @@
+footer {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    align-items: center;
+    background-color: $bgopacidad;
+    padding: 0px 20px;
+    width: 100%;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border-top: 1px solid $oscuro;
+    color: $claro;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  footer section {
+    display: flex;
+  }
+  
+  footer article {
+    display: inline-block;
+    font-family: $ftitle;
+    font-weight: 600;
+    text-align: justify;
+    width: 33%;
+    margin: 20px 50px;
+  }
+  
+  footer li {
+    display: block;
+    font-family: $ffont;
+    font-size: .875rem;
+    color: $claro;
+  }
+  
+  footer ul {
+    padding: 0px;
+  }

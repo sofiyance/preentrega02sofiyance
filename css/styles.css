@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0; }
@@ -13,18 +12,6 @@ body {
   background-color: #eee;
   min-height: 100dvh; }
 
-body#pindex {
-  background-image: url(../assets/playabackgr.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-attachment: fixed; }
-
-body#backpags {
-  background-image: url(../assets/playabckpages.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-attachment: fixed; }
-
 img, svg {
   height: auto;
   max-width: 100%; }
@@ -32,31 +19,6 @@ img, svg {
 body a {
   text-decoration: none;
   cursor: crosshair; }
-
-/* HEADER */
-header {
-  background-color: rgba(11, 11, 11, 0.3);
-  padding: 0px 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
-  border-bottom: 1px solid #1d1d1d; }
-
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%; }
-
-.title {
-  font-family: "Abril Fatface";
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 3.75rem;
-  color: #1d1d1d;
-  white-space: nowrap; }
 
 .links li {
   display: inline;
@@ -102,6 +64,42 @@ section.fullwdw {
 
 .fullwdw:nth-child(3) {
   padding-top: 0px; }
+
+header {
+  background-color: rgba(11, 11, 11, 0.3);
+  padding: 0px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border-bottom: 1px solid #1d1d1d; }
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; }
+
+.title {
+  font-family: "Abril Fatface";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 3.75rem;
+  color: #1d1d1d;
+  white-space: nowrap; }
+
+body#pindex {
+  background-image: url(../assets/playabackgr.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed; }
+
+body#backpags {
+  background-image: url(../assets/playabckpages.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed; }
 
 section#contacto {
   flex-direction: row; }
@@ -173,40 +171,6 @@ button:hover {
   width: 100%;
   border: 2px solid rgba(172, 161, 139, 0.75);
   height: 100%; }
-
-footer {
-  display: grid;
-  grid-template-columns: 80% 20%;
-  align-items: center;
-  background-color: rgba(11, 11, 11, 0.3);
-  padding: 0px 20px;
-  width: 100%;
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
-  border-top: 1px solid #1d1d1d;
-  color: #eee;
-  position: fixed;
-  bottom: 0; }
-
-footer section {
-  display: flex; }
-
-footer article {
-  display: inline-block;
-  font-family: "Abril Fatface";
-  font-weight: 600;
-  text-align: justify;
-  width: 33%;
-  margin: 20px 50px; }
-
-footer li {
-  display: block;
-  font-family: "Noto Sans";
-  font-size: .875rem;
-  color: #eee; }
-
-footer ul {
-  padding: 0px; }
 
 section i {
   font-size: 30px;
@@ -326,6 +290,40 @@ section#nosotros article nosotrosinfo {
   font-size: 1rem;
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px); }
+
+footer {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  background-color: rgba(11, 11, 11, 0.3);
+  padding: 0px 20px;
+  width: 100%;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border-top: 1px solid #1d1d1d;
+  color: #eee;
+  position: fixed;
+  bottom: 0; }
+
+footer section {
+  display: flex; }
+
+footer article {
+  display: inline-block;
+  font-family: "Abril Fatface";
+  font-weight: 600;
+  text-align: justify;
+  width: 33%;
+  margin: 20px 50px; }
+
+footer li {
+  display: block;
+  font-family: "Noto Sans";
+  font-size: .875rem;
+  color: #eee; }
+
+footer ul {
+  padding: 0px; }
 
 @media (max-width: 320px) {
   header {
